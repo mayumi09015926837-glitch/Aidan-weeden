@@ -16,7 +16,7 @@ const browser = await chromium.launch();
 try {
   for (const width of [390, 1280]) {
     console.log(`Website at ${width}px`);
-    const page = await browser.newPage({ viewport: { width, height: 900 } });
+    const page = await browser.newPage({ viewport: { width, height: 900 }, reducedMotion: "reduce" }); // final state, no animation
     await page.goto(url("index.html"));
     await page.waitForLoadState("networkidle");
     await page.evaluate(() => document.fonts.ready);
@@ -25,7 +25,7 @@ try {
     const r = await page.evaluate(() => {
       const res = { overflowX: document.documentElement.scrollWidth - innerWidth, small: [], taps: [], wide: [] };
       for (const el of document.querySelectorAll("body *")) {
-        if (el.closest("svg")) continue;
+        if (el.closest("svg") || el.closest("dialog:not([open])")) continue;
         const own = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
         if (own && parseFloat(getComputedStyle(el).fontSize) < 20) res.small.push(el.tagName + ": " + el.textContent.trim().slice(0, 20) + " " + getComputedStyle(el).fontSize);
         const b = el.getBoundingClientRect();
@@ -33,6 +33,7 @@ try {
       }
       for (const a of document.querySelectorAll("a, button")) {
         const b = a.getBoundingClientRect();
+        if (!b.width || a.closest("dialog:not([open])") || a.classList.contains("skip")) continue; // hidden until used
         if (b.height < 48) res.taps.push(a.textContent.trim().slice(0, 20) + ` (${Math.round(b.height)}px)`);
       }
       return res;
@@ -42,6 +43,54 @@ try {
     if (r.small.length) fail("text under 20px: " + r.small.slice(0, 5).join(" | "));
     if (r.taps.length) fail("tap targets under 48px: " + r.taps.join(", "));
     if (!r.overflowX && !r.wide.length && !r.small.length && !r.taps.length) console.log("  ok");
+  }
+
+  // Buttons and animations, with and without a filled-in config.
+  console.log("Buttons and animations");
+  const sampleCfg = `window.KYOSHITSU_CONFIG = { phone: "03-1234-5678", receptionHours: "平日 10:00〜17:00",
+    lineUrl: "https://lin.ee/example", venueName: "市民センター", venueAddress: "東京都千代田区1-1", images: {} };`;
+  const ok = (cond, msg) => (cond ? console.log("  ok   " + msg) : fail(msg));
+  {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    await page.goto(url("index.html"));
+    await page.waitForTimeout(300);
+    const before = await page.evaluate(() => document.querySelectorAll(".reveal.is-in").length);
+    await page.click(".header-tel");
+    ok(await page.isVisible("#toast.is-shown"), "empty phone: call button shows 「準備中」 message");
+    ok((await page.textContent("#toast")).includes("準備中"), "empty phone: message text");
+    await page.waitForTimeout(6500);
+    ok(await page.evaluate(() => [...document.querySelectorAll("#demo .step.is-on")].map((e) => e.dataset.step).join() === "1,2,4,5"), "hero demo plays to the end");
+    await page.click("#demo-replay");
+    await page.waitForTimeout(200);
+    ok(await page.evaluate(() => document.querySelectorAll("#demo .step.is-on").length === 0), "replay button restarts the demo");
+    await page.evaluate(() => scrollTo(0, 0));
+    for (let y = 0; y < 6000; y += 400) { await page.mouse.wheel(0, 400); await page.waitForTimeout(60); }
+    await page.waitForTimeout(800);
+    const r = await page.evaluate(() => ({ inn: document.querySelectorAll(".reveal.is-in").length, all: document.querySelectorAll(".reveal").length,
+      prog: getComputedStyle(document.getElementById("timeline")).getPropertyValue("--progress") }));
+    ok(before < r.all && r.inn === r.all, `scroll reveal: ${r.inn}/${r.all} sections faded in after scrolling`);
+    ok(Number(r.prog) > 0.9, "timeline line fills while scrolling");
+  }
+  {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    await page.route("**/js/config.js", (r) => r.fulfill({ contentType: "text/javascript", body: sampleCfg }));
+    await page.goto(url("index.html"));
+    ok((await page.getAttribute(".header-tel", "href")) === "tel:0312345678", "phone set: call buttons use tel:0312345678");
+    await page.click(".header-tel");
+    ok(await page.isVisible("#tel-dialog[open]"), "computer: call button opens the phone-number window");
+    await page.click("#close-tel");
+    ok(!(await page.isVisible("#tel-dialog[open]")), "phone-number window closes");
+    ok((await page.getAttribute("#map-link", "href")).startsWith("https://www.google.com/maps/search/"), "map button opens Google Maps for the venue");
+    ok((await page.getAttribute("[data-line]", "href")) === "https://lin.ee/example", "LINE buttons use the LINE URL");
+    ok((await page.getAttribute('a[href="pamphlet.pdf"]', "download")) !== null, "pamphlet download button");
+  }
+  {
+    const page = await browser.newPage({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+    await page.goto(url("index.html"));
+    ok(!(await page.evaluate(() => document.getElementById("action-bar").classList.contains("is-shown"))), "phone: bottom bar hidden at the top");
+    await page.evaluate(() => document.getElementById("before").scrollIntoView());
+    await page.waitForTimeout(1500); // smooth scroll takes a moment
+    ok(await page.evaluate(() => document.getElementById("action-bar").classList.contains("is-shown")), "phone: bottom bar appears after scrolling");
   }
 
   // Also test with long, realistic values so a filled-in config still fits.

@@ -10,6 +10,7 @@ This folder holds:
 | `pamphlet.pdf` | The pamphlet as a print-ready PDF (made from `pamphlet.html`) |
 | `js/config.js` | **The one file you fill in**: phone, dates, venue, price, etc. |
 | `css/base.css` | Shared colours, fonts and components used by both |
+| `js/site.js` | Button behaviour, scroll animations and the chat demo (no need to edit) |
 | `images/` | Put your photos here. Also holds the social-share image and phone icon |
 
 Anything you have not filled in yet shows up in orange as 【…】, so you can see at a glance what's missing.
@@ -25,8 +26,19 @@ phone: "03-1234-5678",
 price: "29,800",
 ```
 
-Both the website and the pamphlet read this file. The phone number also becomes the "電話で申し込む" call
-buttons on the website. Leave a value as `""` and it stays as an orange 【…】.
+Both the website and the pamphlet read this file. Leave a value as `""` and it stays as an orange 【…】.
+
+Some settings also switch on the website's buttons:
+
+| Setting | Button it controls |
+|---|---|
+| `phone` | Every "電話で申し込む" button. On a phone it dials straight away; on a computer it opens a window with the number shown large and a "番号をコピー" (copy) button. |
+| `lineUrl` | The LINE buttons. Use your LINE official account's add-friend link (友だち追加URL, e.g. `https://lin.ee/…`). |
+| `venueAddress` (or `mapUrl`) | "会場の地図を見る". It opens Google Maps for the address, or the exact map link you put in `mapUrl`. |
+
+While a setting is still empty, its button shows a short 「準備中です」 message instead of doing
+nothing. Two buttons need no settings: "パンフレット(PDF)" downloads `pamphlet.pdf`, and
+"このページを家族に送る" opens the phone's share menu (LINE, mail, …), or copies the page address on a computer.
 
 **Photos (optional).** Put the image files in `images/` and write their names in the `images` section:
 
@@ -42,6 +54,10 @@ images: {
 If a photo is missing or its name is misspelled, the page shows the built-in illustration instead, so
 nothing breaks. Use real photos of your own class where you can; ask people's permission before using
 photos of them.
+
+**Animations.** The chat demo at the top plays once, and visitors can replay it. Sections fade in
+gently as you scroll, and the line beside the 6 sessions fills in as you go. Visitors who have turned on "reduce motion" on their phone or
+computer see everything without movement.
 
 **Wording.** The text itself (headlines, card text, FAQ) is written directly in `index.html` and
 `pamphlet.html`. If you change a sentence, change it in both files.
@@ -61,7 +77,9 @@ npm run pdf
 1. **Build.** It writes `pamphlet.pdf`, `images/ogp.png` (the picture shown when the site is shared on
    LINE, Facebook or X) and `images/apple-touch-icon.png`.
 2. **Check.** It opens the website at phone width (390px) and desktop width (1280px), and checks for sideways
-   scrolling, text smaller than 20px, and buttons smaller than 48px. It also checks that each
+   scrolling, text smaller than 20px, and buttons smaller than 48px. It also clicks every kind of
+   button, plays the chat demo at the top of the page, and scrolls through the page to confirm that the
+   animations run. It also checks that each
    pamphlet page fits exactly on one A4 sheet, both as it is now and with long sample details filled in.
    Screenshots go to the `checks/` folder so you can look at them.
 

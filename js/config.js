@@ -13,12 +13,14 @@ window.KYOSHITSU_CONFIG = {
   // お問い合わせ
   phone: "",            // 例: "03-1234-5678"（電話ボタンにも使われます）
   receptionHours: "",   // 例: "平日 10:00〜17:00"
+  lineUrl: "",          // LINE公式アカウントの友だち追加URL 例: "https://lin.ee/xxxxxxx"
 
   // 講座のご案内
   dates: "",            // 例: "2027年1月15日から毎週金曜日"
   startTime: "",        // 例: "午後2時"
   venueName: "",        // 例: "〇〇市民センター 2階 会議室"
-  venueAddress: "",     // 例: "〇〇市〇〇町1-2-3"
+  venueAddress: "",     // 例: "〇〇市〇〇町1-2-3"（「地図を見る」ボタンにも使われます）
+  mapUrl: "",           // 空欄なら住所からGoogleマップを自動で開きます。決まった地図URLがあればここに
   seats: "",            // 例: "6"
   price: "",            // 例: "29,800"
 
