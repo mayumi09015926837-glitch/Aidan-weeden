@@ -1,0 +1,23 @@
+{
+  "name": "hajimete-ai-kyoshitsu",
+  "version": "1.0.0",
+  "description": "はじめてのAI教室 — website and A4 pamphlet",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "pdf": "node scripts/build.mjs && node scripts/check.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayumi09015926837-glitch/Aidan-weeden.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mayumi09015926837-glitch/Aidan-weeden/issues"
+  },
+  "homepage": "https://github.com/mayumi09015926837-glitch/Aidan-weeden#readme",
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  },
+  "private": true,
+  "type": "module"
+}

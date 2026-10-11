@@ -1,0 +1,142 @@
+/* Shared design tokens for the website and the pamphlet. */
+:root {
+  --teal: #0F6E6A;
+  --teal-dark: #0A4F4C;
+  --teal-light: #E3F1EF;
+  --teal-border: #9CCBC5;
+  --bg: #FBFAF6;
+  --grey: #F4F3EF;
+  --grey-border: #CFCCC3;
+  --text: #1F2328;
+  --orange: #B4530A;
+  --white: #FFFFFF;
+
+  --font-head: "Zen Maru Gothic", "BIZ UDPGothic", "Hiragino Maru Gothic ProN", sans-serif;
+  --font-body: "BIZ UDPGothic", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  --radius: 16px;
+  --line: 1.7;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: var(--line);
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "palt" 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* Unfilled config values: 【…】 in orange */
+.ph { color: var(--orange); font-weight: 700; }
+.on-dark .ph {
+  color: var(--orange);
+  background: var(--white);
+  border-radius: 6px;
+  padding: 0 .25em;
+}
+
+/* Line icons and illustrations */
+.icon {
+  width: 1em; height: 1em;
+  fill: none; stroke: currentColor;
+  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  flex: none;
+}
+
+/* Image slot: shows the SVG until a photo loads */
+.photo-slot { position: relative; overflow: hidden; }
+.photo-slot > img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.photo-slot.has-img > svg { visibility: hidden; }
+
+/* Shared building blocks */
+.badge {
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: .2em 1em;
+  background: var(--white);
+  color: var(--teal-dark);
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: .6em; }
+.tags li {
+  display: inline-flex; align-items: center; gap: .4em;
+  background: var(--white);
+  color: var(--teal-dark);
+  border: 2px solid var(--teal-border);
+  border-radius: 999px;
+  padding: .3em .9em;
+  font-weight: 700;
+}
+.tags .icon { color: var(--teal); }
+
+.card {
+  border-radius: var(--radius);
+  border: 2px solid;
+  display: flex; gap: 1em; align-items: flex-start;
+}
+.card .card-icon {
+  flex: none;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--white);
+}
+.card h3 { margin-bottom: .2em; }
+.card--before { background: var(--grey); border-color: var(--grey-border); }
+.card--before .card-icon { color: #5B5E63; }
+.card--after { background: var(--teal-light); border-color: var(--teal-border); }
+.card--after .card-icon { color: var(--teal); }
+
+.sessions { counter-reset: none; }
+.sessions li { display: flex; align-items: center; gap: .8em; }
+.sessions .num {
+  flex: none;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--white);
+  font-family: var(--font-head);
+  font-weight: 700;
+}
+
+.details { display: grid; grid-template-columns: auto 1fr; }
+.details dt {
+  font-weight: 700; color: var(--teal-dark);
+  border-bottom: 1px solid var(--teal-border);
+}
+.details dd { border-bottom: 1px solid var(--teal-border); }
+
+.instructor { display: flex; gap: 1.2em; align-items: center; }
+.instructor .photo-slot {
+  flex: none; border-radius: 50%;
+  background: var(--teal-light);
+  border: 2px solid var(--teal-border);
+  color: var(--teal);
+  display: grid; place-items: center;
+}
+.instructor .photo-slot svg { width: 60%; height: 60%; }
+
+.qr {
+  background: var(--white);
+  border-radius: 12px;
+  display: grid; place-items: center;
+  color: var(--teal-dark);
+}
+.qr svg { width: 100%; height: 100%; }

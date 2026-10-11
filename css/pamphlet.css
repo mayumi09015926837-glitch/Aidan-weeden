@@ -1,0 +1,119 @@
+/* A4 portrait pamphlet, 4 pages. Body text is 12pt minimum. */
+@page { size: A4; margin: 0; }
+
+html { font-size: 12pt; }
+body {
+  font-size: 1rem;
+  background: #D9D7D0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  width: 210mm; height: 297mm;
+  margin: 10mm auto;
+  padding: 16mm 15mm;
+  background: var(--bg);
+  overflow: hidden;
+  position: relative;
+  display: flex; flex-direction: column;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .18);
+  break-after: page;
+}
+.page:last-of-type { break-after: auto; }
+
+@media print {
+  body { background: none; }
+  .page { margin: 0; box-shadow: none; }
+}
+
+h2 { font-size: 22pt; color: var(--teal-dark); margin-bottom: 5mm; }
+h3 { font-size: 16pt; }
+
+.eyebrow {
+  font-family: var(--font-head); font-weight: 700; letter-spacing: .14em;
+  font-size: 14pt; color: var(--teal);
+}
+
+/* 1. Cover */
+.cover { background: var(--teal); color: var(--white); padding: 18mm 16mm 14mm; }
+.cover .badge { font-size: 14pt; margin-bottom: 6mm; }
+.cover-title { font-size: 46pt; line-height: 1.2; margin-bottom: 6mm; }
+.cover-headline { font-family: var(--font-head); font-weight: 700; font-size: 24pt; margin-bottom: 3mm; }
+.cover-sub { font-size: 14pt; }
+.cover-visual {
+  flex: 1; min-height: 0;
+  margin: 6mm 0;
+  border-radius: 8mm;
+}
+.cover-visual .illust { width: 100%; height: 100%; display: block; }
+.cover-visual.has-img { border: 1.5mm solid var(--white); }
+.cover-tags { font-size: 13pt; gap: 3mm; margin-bottom: 7mm; }
+.cover-foot {
+  background: var(--white); color: var(--text);
+  border-radius: 5mm; padding: 5mm 7mm;
+  display: flex; justify-content: space-between; align-items: center; gap: 6mm;
+}
+.cover-foot .ph { background: none; padding: 0; }
+.cover-org { font-size: 13pt; font-weight: 700; }
+.cover-tel {
+  display: flex; align-items: center; gap: 2mm;
+  font-family: var(--font-head); font-weight: 700; font-size: 22pt; color: var(--teal-dark);
+}
+.cover-tel .icon { color: var(--teal); }
+
+/* 2 + 3. Before → After spread */
+.page--before .eyebrow { color: #5B5E63; }
+.cards { display: grid; gap: 6mm; flex: 1; align-content: center; }
+.card { padding: 7mm 7mm; gap: 6mm; align-items: center; }
+.card .card-icon { width: 24mm; height: 24mm; font-size: 14mm; }
+.card p { font-size: 14pt; }
+
+.bridge, .closing {
+  margin-top: 8mm; text-align: center;
+  font-family: var(--font-head); font-weight: 700; font-size: 20pt;
+}
+.bridge {
+  display: flex; align-items: center; justify-content: center; gap: 3mm;
+  color: var(--teal-dark);
+}
+.bridge .icon { font-size: 14mm; color: var(--teal); transform: rotate(-90deg); }
+.closing {
+  background: var(--teal); color: var(--white);
+  border-radius: 5mm; padding: 6mm;
+}
+
+/* 4. Sessions, details, contact */
+.page--info { padding: 13mm 14mm 11mm; }
+.page--info h2 { font-size: 19pt; margin-bottom: 3.5mm; }
+.sessions { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 4mm; margin-bottom: 6mm; }
+.sessions li {
+  background: var(--white); border: 1.5px solid var(--teal-border); border-radius: 3mm;
+  padding: 2.6mm 3mm; font-weight: 700; font-size: 12pt; line-height: 1.4;
+}
+.sessions .num { width: 11mm; height: 11mm; font-size: 14pt; }
+
+.info-grid { display: grid; grid-template-columns: 1.9fr 1fr; gap: 7mm; margin-bottom: 6mm; }
+.info-grid .details { font-size: 13pt; }
+.details dt, .details dd { padding: 2.2mm 0; line-height: 1.45; }
+.details dt { padding-right: 4mm; white-space: nowrap; }
+.instructor { gap: 4mm; margin-bottom: 3mm; }
+.instructor .photo-slot { width: 24mm; height: 24mm; font-size: 24mm; }
+.instructor-name { font-family: var(--font-head); font-weight: 700; font-size: 14pt; }
+.instructor-bio { line-height: 1.6; }
+
+.contact {
+  margin-top: auto;
+  background: var(--teal); color: var(--white);
+  border-radius: 5mm; padding: 5mm 7mm;
+  display: flex; justify-content: space-between; align-items: center; gap: 6mm;
+}
+.contact-title { font-family: var(--font-head); font-weight: 700; font-size: 16pt; }
+.contact-tel {
+  display: flex; align-items: center; gap: 2mm;
+  font-family: var(--font-head); font-weight: 700; font-size: 24pt; line-height: 1.35;
+}
+.line-box { display: flex; flex-direction: column; align-items: center; gap: 2mm; font-weight: 700; text-align: center; line-height: 1.4; }
+.line-box .qr { width: 28mm; height: 28mm; padding: 3mm; }
+.line-box .qr.has-img { padding: 0; }
+.org-line { margin-top: 3mm; text-align: center; }
