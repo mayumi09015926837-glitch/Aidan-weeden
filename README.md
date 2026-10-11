@@ -6,11 +6,14 @@ This folder holds:
 | File | What it is |
 |---|---|
 | `index.html` | The one-page website (plain HTML + CSS, no framework, no build step) |
+| `index-classic.html` | The previous design of the website, kept for reference (hidden from search engines) |
 | `pamphlet.html` | The 4-page A4 pamphlet, laid out for printing |
 | `pamphlet.pdf` | The pamphlet as a print-ready PDF (made from `pamphlet.html`) |
 | `js/config.js` | **The one file you fill in**: phone, dates, venue, price, etc. |
 | `css/base.css` | Shared colours, fonts and components used by both |
-| `js/site.js` | Button behaviour, scroll animations and the chat demo (no need to edit) |
+| `css/brand.css` | The website's design |
+| `js/site.js` | Button behaviour and the chat demo (no need to edit) |
+| `js/brand.js` | The website's scroll scenes (no need to edit) |
 | `images/` | Put your photos here. Also holds the social-share image and phone icon |
 
 Anything you have not filled in yet shows up in orange as 【…】, so you can see at a glance what's missing.
@@ -54,6 +57,11 @@ images: {
 If a photo is missing or its name is misspelled, the page shows the built-in illustration instead, so
 nothing breaks. Use real photos of your own class where you can; ask people's permission before using
 photos of them.
+
+**Photos on the website.** The instructor photo and the LINE QR code appear in their places. The class photo
+(`classPhoto`) appears as a large full-width picture between the "why this class" tiles and the six
+sessions. That section stays hidden until you add a photo, so there is never an empty frame. The hero photo
+(`hero`) is used on the pamphlet cover; the website's top section shows the phone demo instead.
 
 **Animations.** The chat demo at the top plays once, and visitors can replay it. Sections fade in
 gently as you scroll, and the line beside the 6 sessions fills in as you go. Visitors who have turned on "reduce motion" on their phone or

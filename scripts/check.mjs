@@ -66,10 +66,23 @@ try {
     await page.evaluate(() => scrollTo(0, 0));
     for (let y = 0; y < 6000; y += 400) { await page.mouse.wheel(0, 400); await page.waitForTimeout(60); }
     await page.waitForTimeout(800);
-    const r = await page.evaluate(() => ({ inn: document.querySelectorAll(".reveal.is-in").length, all: document.querySelectorAll(".reveal").length,
-      prog: getComputedStyle(document.getElementById("timeline")).getPropertyValue("--progress") }));
+    const r = await page.evaluate(() => ({ inn: document.querySelectorAll(".reveal.is-in").length, all: document.querySelectorAll(".reveal").length }));
     ok(before < r.all && r.inn === r.all, `scroll reveal: ${r.inn}/${r.all} sections faded in after scrolling`);
-    ok(Number(r.prog) > 0.9, "timeline line fills while scrolling");
+    // Problem lines light up as they pass, and the pinned phone changes screen per benefit
+    await page.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
+    await page.waitForTimeout(200);
+    const dim = await page.evaluate(() => Number(document.querySelector("#lit-lines li:last-child").style.getPropertyValue("--lit")));
+    await page.evaluate(() => document.querySelector("#lit-lines li:last-child").scrollIntoView({ block: "start", behavior: "instant" }));
+    await page.waitForTimeout(200);
+    const lit = await page.evaluate(() => Number(document.querySelector("#lit-lines li:last-child").style.getPropertyValue("--lit")));
+    ok(dim < 0.1 && lit > 0.9, "problem lines light up as you scroll");
+    const seen = [];
+    for (let i = 0; i < 4; i++) {
+      await page.evaluate((k) => document.querySelectorAll(".story-step")[k].scrollIntoView({ block: "center", behavior: "instant" }), i);
+      await page.waitForTimeout(200);
+      seen.push(await page.evaluate(() => [...document.querySelectorAll("#story-screens .screen")].findIndex((s) => s.classList.contains("is-active"))));
+    }
+    ok(seen.join() === "0,1,2,3", `pinned phone shows each benefit's screen in turn (${seen.join()})`);
   }
   {
     const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });

@@ -108,7 +108,8 @@
 
   /* ---------- Phone bottom bar: show after the hero ---------- */
   var bar = document.getElementById("action-bar");
-  var hero = document.querySelector(".hero");
+  // Show the bar once the top call button has scrolled out of view
+  var hero = document.querySelector(".hero-actions") || document.querySelector(".hero");
   var contact = document.getElementById("contact");
   if (bar && "IntersectionObserver" in window) {
     var heroVisible = true, contactVisible = false;

@@ -19,9 +19,8 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Maru+Gothic:wght@700&display=swap">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/brand.css">
 <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -52,54 +51,46 @@
 
 <a class="skip" href="#main">本文へ移動</a>
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="logo" href="#top" aria-label="はじめてのAI教室 トップへ">
-      <img src="favicon.svg" alt="" width="40" height="40">
-      <span>はじめてのAI教室</span>
+<!-- Translucent navigation: content scrolls underneath -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top" aria-label="はじめてのAI教室 トップへ">
+      <img src="favicon.svg" alt="" width="36" height="36">はじめてのAI教室
     </a>
-    <nav class="menu" aria-label="ページ内メニュー">
-      <a href="#before">お悩み</a>
+    <nav class="nav-links" aria-label="ページ内メニュー">
+      <a href="#story">できるようになること</a>
       <a href="#sessions">講座内容</a>
       <a href="#details">日程・料金</a>
       <a href="#faq">よくある質問</a>
     </nav>
-    <a class="btn btn--cta header-tel" data-tel href="#contact">
-      <svg class="icon" aria-hidden="true"><use href="#i-call"/></svg>電話で申し込む
-    </a>
+    <a class="pill pill--cta header-tel" data-tel href="#contact">申し込む</a>
   </div>
 </header>
 
 <main id="main">
-  <section id="top" class="hero on-dark">
-    <div class="wrap hero-inner">
-      <div class="hero-text">
-        <p class="badge">スマホから始める AI講座</p>
-        <h1>今からでも、<br>間に合います。</h1>
-        <p class="hero-sub">お店や会社の毎日を、AIがやさしくお手伝い。<br>スマホ1台で、少人数・対面でゆっくり学べます。</p>
-        <div class="hero-actions">
-          <a class="btn btn--cta btn--big" data-tel href="#contact">
-            <svg class="icon" aria-hidden="true"><use href="#i-call"/></svg>電話で申し込む
-          </a>
-          <a class="btn btn--ghost btn--big" href="#sessions">講座の内容を見る</a>
-        </div>
+
+  <!-- 1. Hero: one message, then the "product" rises into view -->
+  <section id="top" class="hero">
+    <div class="hero-copy">
+      <p class="kicker">スマホから始める AI講座</p>
+      <h1 class="display">今からでも、<br>間に合います。</h1>
+      <p class="lede">お店や会社の毎日を、AIがやさしくお手伝い。<br>スマホ1台で、少人数・対面でゆっくり学べます。</p>
+      <div class="hero-actions">
+        <a class="pill pill--cta pill--lg" data-tel href="#contact">
+          <svg class="icon" aria-hidden="true"><use href="#i-call"/></svg>電話で申し込む
+        </a>
+        <a class="link-more" href="#story">何ができるようになるか見る<svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
       </div>
+    </div>
 
-      <div class="hero-visual">
-        <figure class="photo-slot hero-photo" data-img="hero" data-alt="教室で講座を受けている様子">
-          <svg viewBox="0 0 400 480" aria-hidden="true"><rect width="400" height="480" rx="36" fill="#0A4F4C"/><circle cx="330" cy="70" r="150" fill="#13817C" opacity=".55"/><circle cx="40" cy="430" r="120" fill="#13817C" opacity=".35"/></svg>
-        </figure>
-
-        <!-- Demo: what students learn to do. Plays once; replay button below. -->
-        <div class="demo" id="demo" role="img" aria-label="お客様からのお礼のメッセージに、声で頼むとAIがていねいな返信を下書きする様子">
-          <div class="demo-bar">
-            <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>お客様とのトーク
-          </div>
+    <div class="hero-stage" id="hero-stage">
+      <div class="device">
+        <div class="device-screen demo" id="demo" role="img" aria-label="お客様からのお礼のメッセージに、声で頼むとAIがていねいな返信を下書きする様子">
+          <div class="app-bar"><span class="app-dot"></span>お客様とのトーク</div>
           <div class="demo-body" aria-hidden="true">
             <p class="bubble bubble--in step" data-step="1">昨日はありがとう。お料理、おいしかったです!</p>
             <p class="voice step" data-step="2">
               <span class="voice-mic"><svg class="icon"><use href="#i-mic"/></svg></span>
-              <span class="voice-wave"><i></i><i></i><i></i><i></i><i></i></span>
               <span class="voice-text">「お礼の返事を、ていねいに」</span>
             </p>
             <div class="reply-slot">
@@ -109,224 +100,224 @@
             <p class="demo-note step" data-step="5"><svg class="icon"><use href="#i-check"/></svg>AIが下書きしました</p>
           </div>
         </div>
-        <button class="replay" type="button" id="demo-replay">
-          <svg class="icon" aria-hidden="true"><use href="#i-replay"/></svg>もう一度見る
-        </button>
+      </div>
+      <button class="replay" type="button" id="demo-replay">
+        <svg class="icon" aria-hidden="true"><use href="#i-replay"/></svg>もう一度見る
+      </button>
+    </div>
+  </section>
+
+  <!-- 2. The problems, lit up line by line as you scroll -->
+  <section id="before" class="night">
+    <div class="frame">
+      <h2 class="night-title reveal">こんなお悩み、ありませんか?</h2>
+      <ul class="lit-lines" id="lit-lines">
+        <li>文字を打つのが大変。</li>
+        <li>写真の送り方が分からない。</li>
+        <li>AIはニュースで聞くけど、<br class="sp">よく分からない。</li>
+        <li>お客様への返信に<br class="sp">時間がかかる。</li>
+        <li>チラシや求人づくりが大変。</li>
+        <li>怪しい電話やメールが不安。</li>
+      </ul>
+      <p class="night-answer reveal">その悩み、<br class="sp">この教室で解決します。</p>
+    </div>
+  </section>
+
+  <!-- 3. Pinned story: the phone stays, its screen changes per benefit -->
+  <section id="story" class="story">
+    <div class="frame story-head reveal">
+      <h2 class="headline">受講すると、<br class="sp">こうなります。</h2>
+    </div>
+    <div class="frame story-grid">
+      <div class="story-pin" aria-hidden="true">
+        <div class="device device--story"><div class="device-screen story-screens" id="story-screens"></div></div>
+        <ol class="story-dots"><li></li><li></li><li></li><li></li></ol>
+      </div>
+      <div class="story-steps">
+        <article class="story-step" data-index="0">
+          <p class="step-label">01 / 04</p>
+          <h3>声で文章づくり</h3>
+          <p>話すだけで文字になる。<br>LINEの返信もスイスイ。</p>
+          <div class="screen screen--voice">
+            <div class="app-bar"><span class="app-dot"></span>メッセージを作成</div>
+            <div class="scr-body">
+              <p class="typed">明日は10時に開店します。<br>お待ちしております。</p>
+              <div class="mic-big"><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg></div>
+              <p class="scr-caption">話すだけで、文字になります</p>
+            </div>
+          </div>
+        </article>
+        <article class="story-step" data-index="1">
+          <p class="step-label">02 / 04</p>
+          <h3>ていねいな返信</h3>
+          <p>お礼やおわびの文章も、AIが下書き。<br>口コミへの返信もかんたん。</p>
+          <div class="screen screen--reply">
+            <div class="app-bar"><span class="app-dot"></span>口コミ</div>
+            <div class="scr-body">
+              <div class="review"><span class="stars" aria-label="星5つ">★★★★★</span><p>店員さんが親切で、また来たいです。</p></div>
+              <p class="bubble bubble--out">温かいお言葉をありがとうございます。スタッフ一同、またのご来店を心よりお待ちしております。</p>
+              <p class="scr-caption"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>AIの下書き</p>
+            </div>
+          </div>
+        </article>
+        <article class="story-step" data-index="2">
+          <p class="step-label">03 / 04</p>
+          <h3>チラシ・求人づくり</h3>
+          <p>お知らせや求人票がすぐ作れる。<br>外国人のお客様向けの案内も。</p>
+          <div class="screen screen--flyer">
+            <div class="app-bar"><span class="app-dot"></span>チラシ</div>
+            <div class="scr-body">
+              <div class="flyer">
+                <p class="flyer-title">アルバイト募集</p>
+                <p>週2日から・未経験OK</p>
+                <p class="flyer-en" lang="en">We're hiring</p>
+              </div>
+              <p class="scr-caption"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>日本語と英語で完成</p>
+            </div>
+          </div>
+        </article>
+        <article class="story-step" data-index="3">
+          <p class="step-label">04 / 04</p>
+          <h3>安心・安全</h3>
+          <p>怪しい電話やメールを見分けられる。<br>AIに入れてはいけない情報が分かる。</p>
+          <div class="screen screen--safe">
+            <div class="app-bar"><span class="app-dot"></span>メッセージ</div>
+            <div class="scr-body">
+              <p class="bubble bubble--in">【重要】お荷物をお届けできませんでした。こちらから確認してください。</p>
+              <div class="warn"><svg class="icon" aria-hidden="true"><use href="#i-shield-alert"/></svg><p>あやしいメッセージです。<br>リンクは押さないで。</p></div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="trust" aria-label="この講座の特長">
-    <ul class="wrap tags reveal-group">
-      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>対面・少人数</li>
-      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>スマホ1台でOK</li>
-      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>初めての方、大歓迎</li>
-      <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>初回後の全額返金保証</li>
+  <!-- 4. One sentence, full screen -->
+  <section class="statement">
+    <p class="statement-text" id="statement">毎日の仕事が、<br>ぐっとラクに。</p>
+  </section>
+
+  <!-- 5. Why this class -->
+  <section class="frame promises" aria-label="この講座の特長">
+    <ul class="bento">
+      <li class="tile tile--teal reveal"><p class="tile-big">対面・少人数</p><p>少人数制<span data-cfg="seats" class="ph">【〇】</span>名まで</p></li>
+      <li class="tile reveal"><p class="tile-big">スマホ1台でOK</p><p>パソコンは必要ありません。</p></li>
+      <li class="tile reveal"><p class="tile-big">初めての方、<br>大歓迎</p><p>スマホとLINEの基本から。</p></li>
+      <li class="tile tile--deep reveal"><p class="tile-big">初回後の<br>全額返金保証</p><p>ご納得いただけなければ、<br>全額お返しします。</p></li>
     </ul>
   </section>
 
-  <section id="before" class="section section--before">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="stage stage--before">BEFORE</p>
-        <h2>こんなお悩み、ありませんか?</h2>
-      </div>
-      <ul class="cards reveal-group">
-        <li class="card card--before reveal">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
-          <div><h3>スマホ・LINE</h3><p>文字を打つのが大変。写真の送り方が分からない。</p></div>
-        </li>
-        <li class="card card--before reveal">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-question"/></svg></span>
-          <div><h3>AIって何?</h3><p>ニュースで聞くけど、よく分からない。置いていかれている気がする。</p></div>
-        </li>
-        <li class="card card--before reveal">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
-          <div><h3>毎日の仕事の手間</h3><p>お客様への返信に時間がかかる。チラシや求人づくりが大変。</p></div>
-        </li>
-        <li class="card card--before reveal">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield-alert"/></svg></span>
-          <div><h3>詐欺・安全</h3><p>怪しい電話やメールが不安。何を信じていいか分からない。</p></div>
-        </li>
-      </ul>
-      <p class="bridge reveal">
-        <span class="bridge-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></span>
-        その悩み、この教室で解決します。
-      </p>
-    </div>
+  <!-- Optional full-width class photo (appears only when a photo is set) -->
+  <figure class="photo-slot photo-band" data-img="classPhoto" data-alt="少人数で学ぶ教室の様子"></figure>
+
+  <!-- 6. Six sessions -->
+  <section id="sessions" class="frame sessions">
+    <h2 class="headline reveal">全6回の講座内容</h2>
+    <ol class="session-grid reveal-group">
+      <li class="reveal"><span class="s-num">1</span><p>スマホとLINEの基本を、もう一度</p></li>
+      <li class="reveal"><span class="s-num">2</span><p>詐欺から身を守る「安全教室」</p></li>
+      <li class="reveal"><span class="s-num">3</span><p>はじめて、AIと話してみよう</p></li>
+      <li class="reveal"><span class="s-num">4</span><p>お客様への返信・敬語をAIで</p></li>
+      <li class="reveal"><span class="s-num">5</span><p>チラシ・お知らせ・求人づくり</p></li>
+      <li class="reveal"><span class="s-num">6</span><p>あなたのお店だけの使い方をつくる</p></li>
+    </ol>
   </section>
 
-  <section id="after" class="section section--after">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="stage stage--after">AFTER</p>
-        <h2>受講すると、こうなります。</h2>
+  <!-- 7. Details, like a spec sheet -->
+  <section id="details" class="paper">
+    <div class="frame details">
+      <div class="price reveal">
+        <h2 class="headline">講座のご案内</h2>
+        <p class="price-label">受講料</p>
+        <p class="price-value">全6回 <span data-cfg="price" class="ph">【受講料】</span>円<small>(税込)</small></p>
+        <p class="price-note">初回のあと、ご納得いただけなければ全額返金</p>
+        <a class="pill pill--cta pill--lg" data-tel href="#contact">
+          <svg class="icon" aria-hidden="true"><use href="#i-call"/></svg>電話で申し込む
+        </a>
       </div>
-      <ul class="cards reveal-group">
-        <li class="card card--after reveal">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg></span>
-          <div><h3>声で文章づくり</h3><p>話すだけで文字になる。LINEの返信もスイスイ。</p></div>
-        </li>
-        <li class="card card--after reveal">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
-          <div><h3>ていねいな返信</h3><p>お礼やおわびの文章も、AIが下書き。口コミへの返信もかんたん。</p></div>
-        </li>
-        <li class="card card--after reveal">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-flyer"/></svg></span>
-          <div><h3>チラシ・求人づくり</h3><p>お知らせや求人票がすぐ作れる。外国人のお客様向けの案内も。</p></div>
-        </li>
-        <li class="card card--after reveal">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg></span>
-          <div><h3>安心・安全</h3><p>怪しい電話やメールを見分けられる。AIに入れてはいけない情報が分かる。</p></div>
-        </li>
-      </ul>
-      <p class="closing reveal">毎日の仕事が、ぐっとラクに。</p>
-    </div>
-  </section>
-
-  <section id="sessions" class="section">
-    <div class="wrap sessions-grid">
-      <div class="sessions-intro reveal">
-        <h2>全6回の講座内容</h2>
-        <figure class="photo-slot class-photo" data-img="classPhoto" data-alt="少人数で学ぶ教室の様子">
-          <svg viewBox="0 0 400 225" role="img" aria-label="少人数で学ぶ教室のイラスト" fill="none" stroke="#0A4F4C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-  <rect width="400" height="225" fill="#E3F1EF" stroke="none"/>
-  <circle cx="110" cy="78" r="20" fill="#FFFFFF"/><path d="M76 140c0-22 15-36 34-36s34 14 34 36" fill="#FFFFFF"/>
-  <circle cx="200" cy="68" r="20" fill="#FFFFFF"/><path d="M166 130c0-22 15-36 34-36s34 14 34 36" fill="#0F6E6A" stroke="#0A4F4C"/>
-  <circle cx="290" cy="78" r="20" fill="#FFFFFF"/><path d="M256 140c0-22 15-36 34-36s34 14 34 36" fill="#FFFFFF"/>
-  <rect x="40" y="140" width="320" height="22" rx="6" fill="#FFFFFF"/>
-  <path d="M70 162v40M330 162v40"/>
-  <rect x="98" y="122" width="22" height="34" rx="4" fill="#FFFFFF" transform="rotate(-12 109 139)"/>
-  <rect x="279" y="122" width="22" height="34" rx="4" fill="#FFFFFF" transform="rotate(12 290 139)"/>
-</svg>
-        </figure>
-      </div>
-      <ol class="timeline" id="timeline">
-        <li class="reveal"><span class="num">1</span><span class="t-text"><small>第1回</small>スマホとLINEの基本を、もう一度</span></li>
-        <li class="reveal"><span class="num">2</span><span class="t-text"><small>第2回</small>詐欺から身を守る「安全教室」</span></li>
-        <li class="reveal"><span class="num">3</span><span class="t-text"><small>第3回</small>はじめて、AIと話してみよう</span></li>
-        <li class="reveal"><span class="num">4</span><span class="t-text"><small>第4回</small>お客様への返信・敬語をAIで</span></li>
-        <li class="reveal"><span class="num">5</span><span class="t-text"><small>第5回</small>チラシ・お知らせ・求人づくり</span></li>
-        <li class="reveal"><span class="num">6</span><span class="t-text"><small>第6回</small>あなたのお店だけの使い方をつくる</span></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="details" class="section section--paper">
-    <div class="wrap details-grid">
-      <div class="details-box reveal">
-        <h2>講座のご案内</h2>
-        <dl class="details">
-          <dt>日程</dt><dd><span data-cfg="dates" class="ph">【開催日・曜日】</span></dd>
-          <dt>時間</dt><dd><span data-cfg="startTime" class="ph">【開始時間】</span>から1回90分</dd>
-          <dt>会場</dt><dd><span data-cfg="venueName" class="ph">【会場名】</span><br><span data-cfg="venueAddress" class="ph">【住所】</span></dd>
-          <dt>定員</dt><dd>少人数制<span data-cfg="seats" class="ph">【〇】</span>名まで</dd>
-          <dt>受講料</dt><dd>全6回<span data-cfg="price" class="ph">【受講料】</span>円(税込)</dd>
-          <dt>安心保証</dt><dd>初回のあと、ご納得いただけなければ全額返金</dd>
-          <dt>持ち物</dt><dd>ふだんお使いのスマートフォン</dd>
-        </dl>
-        <div class="details-actions">
-          <a class="btn btn--outline" id="map-link" href="#details" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#i-map"/></svg>会場の地図を見る
-          </a>
-          <a class="btn btn--outline" href="pamphlet.pdf" download>
-            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>パンフレット(PDF)
-          </a>
-        </div>
-      </div>
-      <div class="instructor-box reveal">
-        <h2>講師のご紹介</h2>
-        <div class="instructor">
-          <figure class="photo-slot" data-img="instructor" data-alt="講師の写真">
-            <svg class="icon" aria-hidden="true"><use href="#i-person"/></svg>
-          </figure>
-          <p class="instructor-name"><span data-cfg="instructorName" class="ph">【講師名】</span></p>
-        </div>
-        <p class="instructor-bio"><span data-cfg="instructorBio" class="ph">【ひとこと・経歴】</span></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" class="section">
-    <div class="wrap faq-wrap">
-      <h2 class="reveal">よくある質問</h2>
-      <dl class="faq">
-        <div class="faq-item reveal">
-          <dt class="q-bubble">スマホがほとんど使えなくても大丈夫?</dt>
-          <dd class="a-bubble">大丈夫です。第1回はスマホとLINEの基本から、ゆっくり始めます。</dd>
-        </div>
-        <div class="faq-item reveal">
-          <dt class="q-bubble">パソコンは必要ですか?</dt>
-          <dd class="a-bubble">必要ありません。ふだんお使いのスマートフォンだけでOKです。</dd>
-        </div>
-        <div class="faq-item reveal">
-          <dt class="q-bubble">途中で合わないと感じたら?</dt>
-          <dd class="a-bubble">初回の受講後にご納得いただけなければ、受講料を全額お返しします。</dd>
-        </div>
-        <div class="faq-item reveal">
-          <dt class="q-bubble">家族が代わりに申し込めますか?</dt>
-          <dd class="a-bubble">はい、ご家族からのお申し込みも歓迎です。親御さんへのプレゼントにもどうぞ。
-            <button class="btn btn--outline share-btn" type="button" data-share>
-              <svg class="icon" aria-hidden="true"><use href="#i-share"/></svg>このページを家族に送る
-            </button>
-          </dd>
-        </div>
+      <dl class="spec reveal">
+        <div><dt>日程</dt><dd><span data-cfg="dates" class="ph">【開催日・曜日】</span></dd></div>
+        <div><dt>時間</dt><dd><span data-cfg="startTime" class="ph">【開始時間】</span>から1回90分</dd></div>
+        <div><dt>会場</dt><dd><span data-cfg="venueName" class="ph">【会場名】</span><br><span data-cfg="venueAddress" class="ph">【住所】</span>
+          <a class="text-link" id="map-link" href="#details" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg>地図を見る</a></dd></div>
+        <div><dt>定員</dt><dd>少人数制<span data-cfg="seats" class="ph">【〇】</span>名まで</dd></div>
+        <div><dt>持ち物</dt><dd>ふだんお使いのスマートフォン</dd></div>
+        <div><dt>資料</dt><dd><a class="text-link" href="pamphlet.pdf" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>パンフレット(PDF)</a></dd></div>
       </dl>
     </div>
   </section>
 
-  <section id="contact" class="contact on-dark">
-    <div class="wrap contact-inner">
-      <div class="contact-main reveal">
-        <h2>お申し込み・お問い合わせ</h2>
-        <p class="contact-lead">お電話でお気軽にどうぞ</p>
-        <a class="btn btn--phone" data-tel href="#contact">
-          <svg class="icon" aria-hidden="true"><use href="#i-call"/></svg><span data-cfg="phone" class="ph">【電話番号】</span>
-        </a>
-        <p class="contact-hours">受付:<span data-cfg="receptionHours" class="ph">【受付時間】</span></p>
-      </div>
-      <div class="line-box reveal">
+  <!-- 8. Instructor -->
+  <section class="frame teacher reveal" aria-labelledby="teacher-title">
+    <figure class="photo-slot teacher-photo" data-img="instructor" data-alt="講師の写真">
+      <svg class="icon" aria-hidden="true"><use href="#i-person"/></svg>
+    </figure>
+    <div>
+      <h2 class="kicker" id="teacher-title">講師</h2>
+      <p class="teacher-name"><span data-cfg="instructorName" class="ph">【講師名】</span></p>
+      <p class="teacher-bio"><span data-cfg="instructorBio" class="ph">【ひとこと・経歴】</span></p>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section id="faq" class="frame faq">
+    <h2 class="headline reveal">よくある質問</h2>
+    <dl class="faq-list">
+      <div class="reveal"><dt>スマホがほとんど使えなくても大丈夫?</dt><dd>大丈夫です。第1回はスマホとLINEの基本から、ゆっくり始めます。</dd></div>
+      <div class="reveal"><dt>パソコンは必要ですか?</dt><dd>必要ありません。ふだんお使いのスマートフォンだけでOKです。</dd></div>
+      <div class="reveal"><dt>途中で合わないと感じたら?</dt><dd>初回の受講後にご納得いただけなければ、受講料を全額お返しします。</dd></div>
+      <div class="reveal"><dt>家族が代わりに申し込めますか?</dt><dd>はい、ご家族からのお申し込みも歓迎です。親御さんへのプレゼントにもどうぞ。
+        <button class="text-link share-link" type="button" data-share><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg>このページを家族に送る</button></dd></div>
+    </dl>
+  </section>
+
+  <!-- 10. Contact finale -->
+  <section id="contact" class="night contact">
+    <div class="frame contact-inner">
+      <p class="kicker kicker--light reveal">お申し込み・お問い合わせ</p>
+      <h2 class="display display--md reveal">お電話で、<br class="sp">お気軽にどうぞ。</h2>
+      <a class="phone-big reveal" data-tel href="#contact">
+        <svg class="icon" aria-hidden="true"><use href="#i-call"/></svg><span data-cfg="phone" class="ph">【電話番号】</span>
+      </a>
+      <p class="hours reveal">受付:<span data-cfg="receptionHours" class="ph">【受付時間】</span></p>
+      <div class="line-row reveal">
         <figure class="photo-slot qr" data-img="lineQr" data-alt="LINE友だち追加用のQRコード">
           <svg class="icon" aria-hidden="true"><use href="#i-qr"/></svg>
         </figure>
         <div>
-          <p class="line-title">LINEでも受け付けています</p>
-          <a class="btn btn--light" data-line href="#contact">
-            <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>LINEで問い合わせる
-          </a>
+          <p>LINEでも受け付けています</p>
+          <a class="pill pill--light" data-line href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>LINEで問い合わせる</a>
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer on-dark">
-  <div class="wrap footer-inner">
+<footer class="footer">
+  <div class="frame footer-inner">
     <div>
       <p class="footer-name">はじめてのAI教室</p>
       <p>主催:<span data-cfg="organizerName" class="ph">【主催者名】</span></p>
       <p><span data-cfg="organizerAddress" class="ph">【所在地】</span></p>
     </div>
-    <a class="btn btn--light to-top" href="#top">
-      <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>ページの上へ
-    </a>
+    <a class="text-link" href="#top"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>ページの上へ</a>
   </div>
 </footer>
 
-<!-- Phone-only bottom bar: appears after the top section -->
+<!-- Phone-only frosted bottom bar -->
 <div class="action-bar" id="action-bar" aria-label="お申し込み">
-  <a class="btn btn--cta" data-tel href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-call"/></svg>電話する</a>
-  <a class="btn btn--light" data-line href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>LINE</a>
+  <a class="pill pill--cta" data-tel href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-call"/></svg>電話する</a>
+  <a class="pill pill--glass" data-line href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>LINE</a>
 </div>
 
-<!-- Shown on computers when the phone button is clicked -->
+<!-- Shown on computers when a phone button is clicked; grows from the button -->
 <dialog class="tel-dialog" id="tel-dialog" aria-labelledby="tel-dialog-title">
   <p class="tel-dialog-title" id="tel-dialog-title">お電話でのお申し込み</p>
   <p class="tel-dialog-number"><svg class="icon" aria-hidden="true"><use href="#i-call"/></svg><span data-cfg="phone" class="ph">【電話番号】</span></p>
   <p>受付:<span data-cfg="receptionHours" class="ph">【受付時間】</span></p>
   <div class="tel-dialog-actions">
-    <button class="btn btn--cta" type="button" id="copy-tel"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>番号をコピー</button>
-    <button class="btn btn--outline" type="button" id="close-tel"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>閉じる</button>
+    <button class="pill pill--cta" type="button" id="copy-tel"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>番号をコピー</button>
+    <button class="pill pill--outline" type="button" id="close-tel"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>閉じる</button>
   </div>
 </dialog>
 
@@ -335,5 +326,6 @@
 <script src="js/config.js"></script>
 <script src="js/apply-config.js"></script>
 <script src="js/site.js"></script>
+<script src="js/brand.js"></script>
 </body>
 </html>
