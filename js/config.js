@@ -26,7 +26,7 @@ window.KYOSHITSU_CONFIG = {
 
   // 講師
   instructorName: "",   // 例: "山田 花子"
-  instructorBio: "",    // 例: "元・商店街の店主。スマホ教室の講師歴5年。"
+  instructorBio: "同志社大学 経済学部の学生です。分からないことは、何度でも聞いてください。", // 例: "元・商店街の店主。スマホ教室の講師歴5年。"
 
   // 主催者
   organizerName: "",    // 例: "〇〇デジタル相談室"
