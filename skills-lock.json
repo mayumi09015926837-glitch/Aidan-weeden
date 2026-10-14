@@ -55,6 +55,36 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "89496d5dd00f4810205f351759594fc2742bf8eea85a2f2b2d1de59f4bd91576"
     },
+    "handoff": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "handoff/SKILL.md",
+      "computedHash": "de96530eeca430386d651dd6434ef0707b7a3023e6a748e1ec4508e86a63169e"
+    },
+    "luau-core": {
+      "source": "stackfox-labs/luau-skills",
+      "sourceType": "github",
+      "skillPath": "skills/luau/luau-core/SKILL.md",
+      "computedHash": "80ae1765a624ec51d351227f57eedb51ab176a0719f0313751a87c6289f2664e"
+    },
+    "luau-expert": {
+      "source": "afrxo/roblox-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/luau-expert/SKILL.md",
+      "computedHash": "b454ff9755b1f439188e872affb3d2756a158638fd104c9e87914062e1db8494"
+    },
+    "luau-performance": {
+      "source": "stackfox-labs/luau-skills",
+      "sourceType": "github",
+      "skillPath": "skills/luau/luau-performance/SKILL.md",
+      "computedHash": "058a0ac25c5733c938f27b6c57f32a1f87bbb7ab78a10980cb0f82a509ff383e"
+    },
+    "luau-types": {
+      "source": "stackfox-labs/luau-skills",
+      "sourceType": "github",
+      "skillPath": "skills/luau/luau-types/SKILL.md",
+      "computedHash": "e4430bd76c61ad6f99a83611f8bab936ed40d8fb19fda1ef8fa394fedf95af2d"
+    },
     "pdf": {
       "source": "anthropics/skills",
       "sourceType": "github",
@@ -66,6 +96,468 @@
       "sourceType": "github",
       "skillPath": "skills/pptx/SKILL.md",
       "computedHash": "82eaf5daede5a1779aa17ccf06597cb209a0c2bd41d3a2f18bd45e0301a387fb"
+    },
+    "roblox-admin-tools-observability": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-admin-tools-observability/SKILL.md",
+      "computedHash": "d68ef1009a2978afbc235f3a1b35c522f37b6cce83df95ed2aed8623debe1149"
+    },
+    "roblox-analytics": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/design/roblox-analytics/SKILL.md",
+      "computedHash": "fbf78d499deae17dbfa52815854502681b5a81a0f2b0b93eecbb5130b14b8423"
+    },
+    "roblox-analytics-instrumentation": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-analytics-instrumentation/SKILL.md",
+      "computedHash": "c03ee7eeb20a84e9b08ce4088086fb989ed5f902c0045af791cee95c3a323ac7"
+    },
+    "roblox-animation-audio-feedback": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-animation-audio-feedback/SKILL.md",
+      "computedHash": "e3c26c968dbcd61c6edd158f302e000fd6b64f91ac17ce9d2c1ae5e3f7db2cda"
+    },
+    "roblox-animation-vfx": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-animation-vfx/SKILL.md",
+      "computedHash": "67eff53cfbe63315767d33c943a90cc0dd095e2afb144148d3b6ff499bdf7d11"
+    },
+    "roblox-api": {
+      "source": "stackfox-labs/luau-skills",
+      "sourceType": "github",
+      "skillPath": "skills/roblox/roblox-api/SKILL.md",
+      "computedHash": "9fe75da43ffec2b1c24011cd6b49f21be29a96171671ec9ad24292ac18469d37"
+    },
+    "roblox-architecture": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-architecture/SKILL.md",
+      "computedHash": "f035656d9bd66c4245818a91679c5fbc06a52f2232d7865b4ba15f4f86f22001"
+    },
+    "roblox-asset-pipeline": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-asset-pipeline/SKILL.md",
+      "computedHash": "9162007a82ce0b6e76336f262cb801d38fad6493199df11e30be381cd6eb991a"
+    },
+    "roblox-audio": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-audio/SKILL.md",
+      "computedHash": "3e9b6c86e34992b62c4273509fb7e261f33f630993eb1c0c8f58db9713dc79f9"
+    },
+    "roblox-best-practices": {
+      "source": "andrian-syh/roblox-best-practices-skill",
+      "sourceType": "github",
+      "skillPath": "roblox-best-practices/SKILL.md",
+      "computedHash": "7cc613fa00d0c049bd3224998cb7b2994c0f8e9d6dabfa331d276153adda67e3"
+    },
+    "roblox-building": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-building/SKILL.md",
+      "computedHash": "6544eabbd159893888e93fea44a247e43ef10dbd96bebc34d68a3ee4d6a7ebc0"
+    },
+    "roblox-camera": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-camera/SKILL.md",
+      "computedHash": "e16bbf290eba045812067ffd8fc3da4c2d1783297282d75a1d72dd50456f1ed1"
+    },
+    "roblox-characters": {
+      "source": "gamedev-skills/awesome-gamedev-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/other-engines/roblox-characters/SKILL.md",
+      "computedHash": "c944444accc8514c35d6d8534bcb4cd93ee87e00c798e027c8eb7476bffb3fe7"
+    },
+    "roblox-cloud": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/tools/roblox-cloud/SKILL.md",
+      "computedHash": "b1c0dbe0e3737950e44b8f3ea98d90c0b2b34b1a497556d90fe1b5269cf22747"
+    },
+    "roblox-code-maintenance-refactor": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-code-maintenance-refactor/SKILL.md",
+      "computedHash": "802f71fe89ca3a8720d41e264ef1a320cbcdd58e41ab3606898dd7bf0d1a68cd"
+    },
+    "roblox-collaboration-mode": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-collaboration-mode/SKILL.md",
+      "computedHash": "65fd55e5e363df87bedf05934aa63c30f5f2f61272c98ad477eaedee2d2b2590"
+    },
+    "roblox-combat-systems": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-combat-systems/SKILL.md",
+      "computedHash": "57a3fd9ce3634f2ae902c0b467e8e4ffcba944d5119bed8e51b40748aa908b35"
+    },
+    "roblox-community-ops": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-community-ops/SKILL.md",
+      "computedHash": "996ea90f622b14376e4e9028696172f6709f4828c933f22c89380db01a0cd6bb"
+    },
+    "roblox-core": {
+      "source": "stackfox-labs/luau-skills",
+      "sourceType": "github",
+      "skillPath": "skills/roblox/roblox-core/SKILL.md",
+      "computedHash": "a2931520c22a0589c70d43a38d47a7ebf54ac8bca0992fc56fa4ec3f6250fb50"
+    },
+    "roblox-creator-store-security-audit": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-creator-store-security-audit/SKILL.md",
+      "computedHash": "3377537421971c1d7373fbf2fd98372c655879c1e7c417a279ead0eeec957f96"
+    },
+    "roblox-data": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-data/SKILL.md",
+      "computedHash": "b2f19669b48d8ec1efcb68a74d89806764197cbdd6958569abe692871763913c"
+    },
+    "roblox-datastore-persistence": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-datastore-persistence/SKILL.md",
+      "computedHash": "0a142a3511555bcb4002fee41f130c23afa7099247da1a3fd447dd332a68f506"
+    },
+    "roblox-datastores": {
+      "source": "gamedev-skills/awesome-gamedev-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/other-engines/roblox-datastores/SKILL.md",
+      "computedHash": "80e4720e6eb1fdcb2a5ad3383845c3ce9035ce85aeb243399ab1ebc918e41776"
+    },
+    "roblox-debugging-bugfix": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-debugging-bugfix/SKILL.md",
+      "computedHash": "908feba658df46d764a416565410f4a9cd530a6b19428be8977c0d98cb41303f"
+    },
+    "roblox-dev": {
+      "source": "afrxo/roblox-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/roblox-dev/SKILL.md",
+      "computedHash": "eef031b7734902153d86a05f7a595e531284343be5ba0d7c044b830833aec194"
+    },
+    "roblox-dev-skill": {
+      "source": "MSayib/roblox-dev-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "7471c2478485e93456fa98162c5428d651ad9fe0e8807646005f3dcaf2481fdb"
+    },
+    "roblox-economy-balancing": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-economy-balancing/SKILL.md",
+      "computedHash": "30b5a945b9be7b251cfb2ceae5a965b1f028a53ae0a56b288984ecae7fab9e5a"
+    },
+    "roblox-game-design": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/design/roblox-game-design/SKILL.md",
+      "computedHash": "b2c1731b4a5c242c3af0afe07e5324513f1d2af7fdd1280feb8e1f91e303d95c"
+    },
+    "roblox-game-development-lifecycle": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-game-development-lifecycle/SKILL.md",
+      "computedHash": "c762b16cf0bef85f29481863f0c9b2a21a52195ae5eb5696e1ee99841be38bc9"
+    },
+    "roblox-game-ideas": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-game-ideas/SKILL.md",
+      "computedHash": "f42ef96dc2788dda15d372fc89f14a2ec3a2046ed57c1384b02b29f5698c76c6"
+    },
+    "roblox-game-ux": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-game-ux/SKILL.md",
+      "computedHash": "d47fb2387461a6b2d8cfa084d48b50dc9adc29cda5892a0cb0f8419843ce7a66"
+    },
+    "roblox-genre-patterns": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-genre-patterns/SKILL.md",
+      "computedHash": "703428eea1e25b8f70a077bc7845315125b2e6accc913fbd8527ed9d08fd7cb2"
+    },
+    "roblox-growth-design": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/design/roblox-growth-design/SKILL.md",
+      "computedHash": "1ada052256b8c4cb0bd516086d37685a2da120265c6527ed01c75bac9aee97ce"
+    },
+    "roblox-growth-marketing": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-growth-marketing/SKILL.md",
+      "computedHash": "7597a0ffa4f522023620c5c17bc5b514a12c70241ef36d1384b4aced081cdf66"
+    },
+    "roblox-gui": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-gui/SKILL.md",
+      "computedHash": "808665bee48213d9b1a831bc0106e391a21cc5bf2b1deb2e04fcac04f1c09ca9"
+    },
+    "roblox-input": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-input/SKILL.md",
+      "computedHash": "82c8651df65772e44dc56a17f1c9ee62f95d18002b4d4b4ae3c18b258b8e0f91"
+    },
+    "roblox-lighting": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-lighting/SKILL.md",
+      "computedHash": "e508d0c7c2ba784129f6735b947bb604e89861607aa47f7dc6fab980e7f4859a"
+    },
+    "roblox-liveops-roadmap": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-liveops-roadmap/SKILL.md",
+      "computedHash": "ccad6295d5f82ee3f1f9827e8e9efde3226f0b099b4cd19ca3e55c36eac151a6"
+    },
+    "roblox-localization": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-localization/SKILL.md",
+      "computedHash": "ff1d2155974f6c940752232c5a3101a1203255956fd7cbd9039c9903632ed932"
+    },
+    "roblox-localization-accessibility": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-localization-accessibility/SKILL.md",
+      "computedHash": "94c8489dc2825baacc7c095746bedb1d9fc5f18a1a9573c6b9d346bbd558ad38"
+    },
+    "roblox-luau": {
+      "source": "gamedev-skills/awesome-gamedev-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/other-engines/roblox-luau/SKILL.md",
+      "computedHash": "5c09ad058e7d6a9165d5055605fb70cb0740110c6380be6826cf0201ed85eb49"
+    },
+    "roblox-luau-architecture": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-luau-architecture/SKILL.md",
+      "computedHash": "8d5bd9f6d20a33961cc6b16d38a54735e177d1c98dae77a3bcb2769b75d8b969"
+    },
+    "roblox-luau-core": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-luau-core/SKILL.md",
+      "computedHash": "5b24d1b9341c76e78fd1ef96ffccc4329af753aabb1ccfb34f01364372b07473"
+    },
+    "roblox-luau-patterns": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-luau-patterns/SKILL.md",
+      "computedHash": "81c6e878be3d2bcba3ec832e2f44de7842dc819ed89315d16373cec331c93f41"
+    },
+    "roblox-luau-types": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-luau-types/SKILL.md",
+      "computedHash": "6759b12ed5158d6f5f8f8e76dbaf736ebb02bd6f4bc5b10800e3dd71dda9cc12"
+    },
+    "roblox-mobile-playtest": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-mobile-playtest/SKILL.md",
+      "computedHash": "8ad954d4357689be6a49e9d51a75041ef7299a773a90ea302eecb89efd0b7b30"
+    },
+    "roblox-monetization": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/design/roblox-monetization/SKILL.md",
+      "computedHash": "bed75fdaf58806fbaad283ae114fd69452c3851c54061308a413b16fa4f57db7"
+    },
+    "roblox-monetization-optimization": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-monetization-optimization/SKILL.md",
+      "computedHash": "942bc243ef38aad11b74496abebf7d118b46c69d369ca77941c390236534f7a1"
+    },
+    "roblox-networking": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-networking/SKILL.md",
+      "computedHash": "ae0d739a499edc130dc2704ede79fb9b1cc90a47b94d0c913ef18edc7764f638"
+    },
+    "roblox-npc-ai": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-npc-ai/SKILL.md",
+      "computedHash": "7f2172672954dde231cbcbdd535d46ca3bf67d7ffcccf50ea34a893d7c8f3e57"
+    },
+    "roblox-oauth": {
+      "source": "stackfox-labs/luau-skills",
+      "sourceType": "github",
+      "skillPath": "skills/roblox/roblox-oauth/SKILL.md",
+      "computedHash": "50d68614133c71aac39519f2b11ad85ceba011965c75ff77f1865ca33d42026c"
+    },
+    "roblox-performance": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-performance/SKILL.md",
+      "computedHash": "b07e6ec7994b45f30bc779489a7ecec41b0f91352dbfbb2241a0c1adcd78eec2"
+    },
+    "roblox-performance-optimization": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-performance-optimization/SKILL.md",
+      "computedHash": "3dfb857a3b87be4ff672b363c0c2c8c81b9bb196e28cac879d06934063b65b5e"
+    },
+    "roblox-physics": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/gameplay/roblox-physics/SKILL.md",
+      "computedHash": "fcfc40945b5bf15463bbbd792afe4342ddabfadf0a222b7fcc8f7ca128f113d4"
+    },
+    "roblox-player-psychology": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/design/roblox-player-psychology/SKILL.md",
+      "computedHash": "e8d30f35a9078b245135734fe76dd55384bd1f3b5b463af7d31e3d0222eb9394"
+    },
+    "roblox-playtest-qa": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-playtest-qa/SKILL.md",
+      "computedHash": "0f89ece5fd3fe861ec52017ce29a05498c0c501abed3a1ea92bdca67f43724cf"
+    },
+    "roblox-policy-compliance": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-policy-compliance/SKILL.md",
+      "computedHash": "6bcfd7577b42f87180d0a3399e8067c5a7cf657f829f0b63fecc050dfad1de3a"
+    },
+    "roblox-publish-checklist": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/tools/roblox-publish-checklist/SKILL.md",
+      "computedHash": "8d6b47fe5c0f4f942da1fdeac3429ca04d7f8a598769b6cc7e8c68441e12cdec"
+    },
+    "roblox-publishing-discovery": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-publishing-discovery/SKILL.md",
+      "computedHash": "308920b3e32e4b877e725e6db3218b9829e92394077863cce8539a9c92ecc88a"
+    },
+    "roblox-quest-progression-systems": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-quest-progression-systems/SKILL.md",
+      "computedHash": "fa3454940433aba4a2707241e3c5e533486d87185e481928375ae3d837d6f00f"
+    },
+    "roblox-release-operations": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-release-operations/SKILL.md",
+      "computedHash": "6f76305e450ce07f42e5f7989f2bd936e84a2b07211b46855856acf7317bd899"
+    },
+    "roblox-retention-monetization": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-retention-monetization/SKILL.md",
+      "computedHash": "8ce9193e5ef03acab8e79fe666ade65b417fbe7fbab88150e6c3113869fa006f"
+    },
+    "roblox-security": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-security/SKILL.md",
+      "computedHash": "2cdc04ee54b4fdd3438cad7645351c77dc94443310c2a92cf98a374a387ac035"
+    },
+    "roblox-security-economy": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-security-economy/SKILL.md",
+      "computedHash": "23d79bcf15d22c67f4a0af86819f3142ddefce0403cc2056e9c556c389052284"
+    },
+    "roblox-server-data": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/core/roblox-server-data/SKILL.md",
+      "computedHash": "390f60ed4b89dd475d0d78341f27db694132df0520bf408e235696b6a3b46934"
+    },
+    "roblox-social-systems": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-social-systems/SKILL.md",
+      "computedHash": "145d0ecf243466b7f91921a35eaf18f4b8b0ed4b8b39c730737574efbf4806db"
+    },
+    "roblox-studio-mcp": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/tools/roblox-studio-mcp/SKILL.md",
+      "computedHash": "3d191333742ab652752e1856eab9650e5ca2ede4c49bfcf7402796ea55b378f7"
+    },
+    "roblox-studio-workflow": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-studio-workflow/SKILL.md",
+      "computedHash": "f930aef2b62ff2ebfba25d6a22c7fa593b233ef6b9d470a0f6af3b8b12739979"
+    },
+    "roblox-to-issues": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-to-issues/SKILL.md",
+      "computedHash": "6f40647bd9e80d937b6ef8b3db13e02e5b78ea0cc1bc0a17c7cec69dc516b96d"
+    },
+    "roblox-to-prd": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-to-prd/SKILL.md",
+      "computedHash": "1d3d410dcd7afbe1e0e273987fc2ab7da6f1d43e367f4f1dcf487433385e1bb0"
+    },
+    "roblox-toolchain": {
+      "source": "afrxo/roblox-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/roblox-toolchain/SKILL.md",
+      "computedHash": "58830cf9996ba07f6ba200f062b7a93b9a6566f1e00a84739585e3c0db88c277"
+    },
+    "roblox-tooling": {
+      "source": "TabooHarmony/roblox-brain",
+      "sourceType": "github",
+      "skillPath": "skills/tools/roblox-tooling/SKILL.md",
+      "computedHash": "b8bd61f32736c5e3d608c20583ad94e9a15330f54a4e9fa31622649b497ccb47"
+    },
+    "roblox-triage": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-triage/SKILL.md",
+      "computedHash": "dac449537db38ac11032471afc9133f18ece5e8a020f753f96914a9a2834786c"
+    },
+    "roblox-ui": {
+      "source": "afrxo/roblox-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/roblox-ui/SKILL.md",
+      "computedHash": "38a7931006e1767386df8c947be24a3a013159f52091badc29385c3d87374f07"
+    },
+    "roblox-ui-implementation": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-ui-implementation/SKILL.md",
+      "computedHash": "8d8ab288c527661b7123bfaa51ccc64da229a1a3de0afed1396a8b32a5ad0594"
+    },
+    "roblox-world-level-design": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "roblox-world-level-design/SKILL.md",
+      "computedHash": "5d82b54ea0a0bc761ac74e22ab349297322bd21b8ba9a2fce9e9ab5e01167036"
+    },
+    "setup-roblox-skills": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "setup-roblox-skills/SKILL.md",
+      "computedHash": "396fb087766da58c4bfeb4effca982cab89f8338ed02ad2ed48136861d129ee7"
     },
     "skill-creator": {
       "source": "anthropics/skills",
@@ -115,6 +607,12 @@
       "skillPath": "skills/web-design-guidelines/SKILL.md",
       "computedHash": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a"
     },
+    "write-a-skill": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "write-a-skill/SKILL.md",
+      "computedHash": "b2fa3e0198e75ceced1a91ce07bd3ecc22036d724838454aab3947d1546e40b5"
+    },
     "writing-guidelines": {
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",
@@ -126,6 +624,12 @@
       "sourceType": "github",
       "skillPath": "skills/xlsx/SKILL.md",
       "computedHash": "f5945e6e76dc7c178375e5cdf3140959b30cbcd4570ec3dc62296812259fc38d"
+    },
+    "zoom-out": {
+      "source": "AshExplained/roblox-skills",
+      "sourceType": "github",
+      "skillPath": "zoom-out/SKILL.md",
+      "computedHash": "d8a58c8e455e0598650165f046766b781342e767826851078643b78d5a30cbcb"
     }
   }
 }
